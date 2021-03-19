@@ -5,9 +5,11 @@
         $i = 1;
         
         while ($i <= 6) {
+            $contraints = NULL;
             if ($i % 2 == 0){
-                echo "<h".$i." style='color:red'>Heading ".$i."</h".$i.">";
+                $contraints = "style='color:red'";
             }
+            echo "<h".$i." $contraints>Heading ".$i."</h".$i.">";
             $i++;
         }
     ?>

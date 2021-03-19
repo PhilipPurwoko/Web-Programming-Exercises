@@ -3,9 +3,11 @@
     <body>
     <?php
         for($i=1; $i <= 6; $i++){
+            $contraints = NULL;
             if ($i % 2 == 0){
-                echo "<h".$i." style='color:red'>Heading ".$i."</h".$i.">";
+                $contraints = "style='color:red'";
             }
+            echo "<h".$i." $contraints>Heading ".$i."</h".$i.">";
         }
     ?>
     </body>
