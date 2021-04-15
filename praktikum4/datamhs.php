@@ -2,12 +2,19 @@
 	table, th, td {
 		border: 1px solid black;
 	}
+	body {
+		text-align: center;
+	}
+	table {
+		margin: auto;
+	}
 </style>
 
 <?php
 	$str_mhs = 'datamhs.dat';
 	$file_mhs = fopen($str_mhs, 'r') or die('Tidak bisa buka file!');
 	$arr_mhs = explode(PHP_EOL, fread($file_mhs, filesize($str_mhs)));
+	echo "<h1>DATA MAHASISWA</h1>";
 	echo "<table>";
 	echo "<tr><th>No</th><th>NIM</th><th>Nama Mhs</th><th>Tanggal Lahir</th><th>Tempat Lahir</th><th>Usia (thn)</th></tr>";
 	for($i=0; $i < count($arr_mhs); $i++){
@@ -22,5 +29,6 @@
 		echo "</tr>";
 	}
     echo "</table>";
+    echo "Jumlah Data : ".count($arr_mhs);
 	fclose($file_mhs);	
 ?>
