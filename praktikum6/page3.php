@@ -1,5 +1,7 @@
 <?php
 session_start();
+include('cek.php');
+
 
 echo "<h1>Page 3</h1>";
 // menampilkan nama lengkap usernya
